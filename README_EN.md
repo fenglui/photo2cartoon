@@ -12,6 +12,8 @@
   <img src='./images/QRcode.jpg' height='150px' width='150px'>
 </div>
 
+You can also try on this page: [https://ai.minivision.cn/#/coreability/cartoon](https://ai.minivision.cn/#/coreability/cartoon)
+
 ## Introduce
 
 The aim of portrait cartoon stylization is to transform real photos into cartoon images with portrait's ID information and texture details. We use Generative Adversarial Network method to realize the mapping of picture to cartoon. Considering the difficulty in obtaining paired data and the non-corresponding shape of input and output, we adopt unpaired image translation fashion.
@@ -113,6 +115,11 @@ python train.py --dataset photo2cartoon
 Load pre-trained weights:
 ```
 python train.py --dataset photo2cartoon --pretrained_weights models/photo2cartoon_weights.pt
+```
+
+Train with Multi-GPU:
+```
+python train.py --dataset photo2cartoon --batch_size 4 --gpu_ids 0 1 2 3
 ```
 
 ## Q&A
